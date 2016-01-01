@@ -40,6 +40,8 @@ Options used by the script
     :let python_highlight_builtin_objs = 1
 <  Highlight builtin functions only >
     :let python_highlight_builtin_funcs = 1
+<  Highlight self and cls attributes >
+    :let python_highlight_self = 1
 <  Highlight standard exceptions >
     :let python_highlight_exceptions = 1
 <  Highlight `%` string formatting >

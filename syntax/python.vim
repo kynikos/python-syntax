@@ -72,6 +72,7 @@
 "                                           objects
 "      python_highlight_builtin_objs        Highlight builtin objects only
 "      python_highlight_builtin_funcs       Highlight builtin functions only
+"    python_highlight_self                  Highlight self and cls attributes
 "    python_highlight_exceptions            Highlight standard exceptions
 "    python_highlight_string_formatting     Highlight % string formatting
 "    python_highlight_string_format         Highlight str.format syntax
@@ -139,6 +140,7 @@ if s:Enabled("g:python_highlight_all")
     call s:EnableByDefault("g:python_highlight_builtin_objs")
     call s:EnableByDefault("g:python_highlight_builtin_funcs")
   endif
+  call s:EnableByDefault("g:python_highlight_self")
   call s:EnableByDefault("g:python_highlight_exceptions")
   call s:EnableByDefault("g:python_highlight_string_formatting")
   call s:EnableByDefault("g:python_highlight_string_format")
@@ -418,6 +420,14 @@ if s:Enabled("g:python_highlight_builtin_objs")
 endif
 
 "
+" Self and cls
+"
+
+if s:Enabled("g:python_highlight_self")
+  syn keyword pythonSelf self cls
+endif
+
+"
 " Builtin functions
 "
 
@@ -572,6 +582,8 @@ if version >= 508 || !exists("did_python_syn_inits")
 
   HiLink pythonBuiltinObj       Structure
   HiLink pythonBuiltinFunc      Function
+
+  HiLink pythonSelf             Identifier
 
   HiLink pythonExClass          Structure
 

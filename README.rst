@@ -103,6 +103,8 @@ Options used by the script
   Highlight builtin objects only
 ``python_highlight_builtin_funcs``
   Highlight builtin functions only
+``python_highlight_self``
+  Highlight self and cls attributes
 ``python_highlight_exceptions``
   Highlight standard exceptions
 ``python_highlight_string_formatting``
